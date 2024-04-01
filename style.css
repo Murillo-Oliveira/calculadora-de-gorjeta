@@ -1,23 +1,23 @@
 * {
     margin: 0;
-   padding: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Space Mono", serif;
 }
 
 :root {
-    --green-100: #f3f9fa;
-    --green-200: #c5e4e7;
-    --green-300: #9ebbbd;
-    --green-400: #7f9d9f;
-    --green-500: #5e7a7d;
-    --green-600: #547878;
-    --green-700: #3d6666;
-    --green-800: #00474b;
-    --ligth-green: #26c2ae;
-    --white: #ffffff;
-    --green-hover: #9fe8df;
-    --danger: #e17457;
+    --green-100:   #f3f9fa;
+    --green-200:   #c5e4e7;
+    --green-300:   #9EBBBD;
+    --green-400:   #7F9D9F;
+    --green-500:   #5E7A7D;
+    --green-600:   #547878;
+    --green-700:   #3D6666;
+    --green-800:   #00474B;
+    --light-green: #26C2AE;
+    --white:       #FFFFFF;
+    --green-hover: #9FE8DF;
+    --danger:      #E17457;
 }
 
 body {
@@ -53,7 +53,7 @@ main {
 .pessoas .input-box {
     margin-top: 0.4rem;
     background-color: var(--green-100);
-    pad: 0.4rem 1.3rem;
+    padding: 0.4rem 1.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,7 +83,7 @@ main {
 .pessoas:has(input:hover) .input-box,
 .gorjeta #outra:focus,
 .gorjeta #outra:hover {
-    outline: 2px solid var(--ligth-green);
+    outline: 2px solid var(--light-green);
     cursor: pointer;
 }
 
@@ -107,6 +107,11 @@ main {
     color: var(--white);
 }
 
+.gorjeta .botao-ativo {
+    background-color: var(--light-green);
+    color: var(--green-800);
+}
+
 .gorjeta input[type="button"]:hover,
 .resultados button:hover {
     background-color: var(--green-hover);
@@ -114,9 +119,9 @@ main {
 }
 
 .gorjeta #outra {
-width: 100%;
-background-color: var(--green-100);
-color: var(--green-500);
+    width: 100%;
+    background-color: var(--green-100);
+    color: var(--green-800);
 }
 
 .gorjeta #outra::placeholder {
@@ -129,7 +134,7 @@ color: var(--green-500);
     justify-content: space-between;
 }
 
-.pessoas .erro {
+.pessoas #erro-div {
     outline: 2px solid var(--danger);
 }
 
@@ -137,6 +142,7 @@ color: var(--green-500);
     font-size: 0.75rem;
     color: var(--danger);
     font-weight: 700;
+    display: none;
 }
 
 .resultados {
@@ -162,12 +168,12 @@ color: var(--green-500);
 }
 
 .resultados div > strong {
-    color: var(--ligth-green);
+    color: var(--light-green);
     font-size: 2rem;
 }
 
 .resultados .gorjeta-total {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1,25rem;
 }
 
 .resultados .total {
@@ -176,7 +182,7 @@ color: var(--green-500);
 
 .resultados button {
     width: 100%;
-    background: var(--ligth-green);
+    background-color: var(--light-green);
     border: none;
     border-radius: 0.3125rem;
     color: var(--green-800);
@@ -192,8 +198,7 @@ color: var(--green-500);
     display: none;
 }
 
-
-@media(min_width: 920px) {
+@media(min-width: 920px) {
     body {
         display: flex;
         flex-direction: column;
@@ -222,16 +227,16 @@ color: var(--green-500);
     .gorjeta div {
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
 
-.resultados {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    .resultados {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-    padding: 2.5rem;
-}
+        padding: 2.5rem;
+    }
 
-.resultados div > strong {
-
+    .resultados div > strong {
+        font-size: 3rem;
+    }
 }
